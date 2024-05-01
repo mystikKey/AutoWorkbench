@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "s": {
+      "item": "autoworkbenchmod:stone_gear"
+    }
+  },
+  "pattern": [
+    " i ",
+    "isi",
+    " i "
+  ],
+  "result": {
+    "item": "autoworkbenchmod:iron_gear"
+  },
+  "show_notification": true
+}

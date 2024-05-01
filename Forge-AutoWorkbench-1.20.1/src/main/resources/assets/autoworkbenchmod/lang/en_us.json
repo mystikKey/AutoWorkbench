@@ -1,0 +1,13 @@
+{
+  "item.autoworkbenchmod.wood_gear": "Wood Gear",
+  "item.autoworkbenchmod.stone_gear": "Stone Gear",
+  "item.autoworkbenchmod.iron_gear": "Iron Gear",
+  "item.autoworkbenchmod.gold_gear": "Gold Gear",
+  "item.autoworkbenchmod.diamond_gear": "Diamond Gear",
+
+  "creativetab.autoworkbench_tab": "Auto Workbench",
+
+  "block.autoworkbenchmod.auto_workbench" : "Auto Workbench",
+
+  "tooltip.autoworkbenchmod.auto_workbench.cycle_through_recipes": "Cycle through recipes"
+}

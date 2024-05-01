@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minecraft:crafting_table"
+    },
+    "s": {
+      "item": "autoworkbenchmod:stone_gear"
+    }
+  },
+  "pattern": [
+    "   ",
+    "scs",
+    "   "
+  ],
+  "result": {
+    "item": "autoworkbenchmod:auto_workbench"
+  },
+  "show_notification": true
+}

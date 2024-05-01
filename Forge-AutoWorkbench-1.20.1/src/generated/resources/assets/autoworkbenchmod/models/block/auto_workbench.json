@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "autoworkbenchmod:block/auto_workbench_bottom",
+    "east": "autoworkbenchmod:block/auto_workbench_side",
+    "north": "autoworkbenchmod:block/auto_workbench_front",
+    "particle": "autoworkbenchmod:block/auto_workbench_side",
+    "south": "autoworkbenchmod:block/auto_workbench_side",
+    "up": "autoworkbenchmod:block/auto_workbench_top",
+    "west": "autoworkbenchmod:block/auto_workbench_side"
+  }
+}

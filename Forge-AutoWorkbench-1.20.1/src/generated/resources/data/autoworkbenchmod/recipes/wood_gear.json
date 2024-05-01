@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " s ",
+    "s s",
+    " s "
+  ],
+  "result": {
+    "item": "autoworkbenchmod:wood_gear"
+  },
+  "show_notification": true
+}

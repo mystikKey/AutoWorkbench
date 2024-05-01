@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "autoworkbenchmod:block/auto_workbench",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "autoworkbenchmod:block/auto_workbench"
+    },
+    "facing=south": {
+      "model": "autoworkbenchmod:block/auto_workbench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "autoworkbenchmod:block/auto_workbench",
+      "y": 270
+    }
+  }
+}

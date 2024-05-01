@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "autoworkbenchmod:gold_gear"
+    }
+  },
+  "pattern": [
+    " d ",
+    "dgd",
+    " d "
+  ],
+  "result": {
+    "item": "autoworkbenchmod:diamond_gear"
+  },
+  "show_notification": true
+}

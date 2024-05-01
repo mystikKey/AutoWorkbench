@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minecraft:cobblestone"
+    },
+    "w": {
+      "item": "autoworkbenchmod:wood_gear"
+    }
+  },
+  "pattern": [
+    " c ",
+    "cwc",
+    " c "
+  ],
+  "result": {
+    "item": "autoworkbenchmod:stone_gear"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "minecraft:gold_ingot"
+    },
+    "i": {
+      "item": "autoworkbenchmod:iron_gear"
+    }
+  },
+  "pattern": [
+    " g ",
+    "gig",
+    " g "
+  ],
+  "result": {
+    "item": "autoworkbenchmod:gold_gear"
+  },
+  "show_notification": true
+}
