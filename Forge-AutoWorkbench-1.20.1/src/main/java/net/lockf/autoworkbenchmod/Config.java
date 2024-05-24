@@ -22,7 +22,9 @@ public class Config {
 
     private static final ForgeConfigSpec.IntValue MAX_PROGRESS = BUILDER
             .comment("Max speed for crafting (ticks).")
-            .defineInRange("maxProgress", 5,1, 50);
+            .defineInRange("maxProgress", 5,1, 100);
+
+    /**** Main ****/
 
     /**** Example ****/
     /*
@@ -43,6 +45,7 @@ public class Config {
             .comment("A list of items to log on common setup.")
             .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), Config::validateItemName);
     */
+    /**** Example ****/
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
@@ -56,9 +59,11 @@ public class Config {
 
     public static Set<Item> items;
 
+    /*
     private static boolean validateItemName(final Object obj) {
         return obj instanceof final String itemName && ForgeRegistries.ITEMS.containsKey(new ResourceLocation(itemName));
     }
+    */
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {

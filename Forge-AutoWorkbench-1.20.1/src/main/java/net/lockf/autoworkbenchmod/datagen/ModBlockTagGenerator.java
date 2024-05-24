@@ -20,6 +20,5 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.Auto_Workbench.get());
-
     }
 }

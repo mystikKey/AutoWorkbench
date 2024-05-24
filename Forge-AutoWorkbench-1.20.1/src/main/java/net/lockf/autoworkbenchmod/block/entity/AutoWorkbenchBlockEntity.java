@@ -65,7 +65,7 @@ public class AutoWorkbenchBlockEntity extends BlockEntity implements MenuProvide
     private CraftingRecipe craftingRecipe;
 
     private int progress = 0;
-    private int maxProgress = Config.maxProgress /*10 - default*/;
+    private int maxProgress = Config.maxProgress /* 5 - default */;
 
     private boolean hasRecipeLoaded = false;
 
@@ -144,7 +144,6 @@ public class AutoWorkbenchBlockEntity extends BlockEntity implements MenuProvide
 
             return this.lazyItemHandlerSided.cast();
         }
-
         return super.getCapability(cap, side);
     }
 
@@ -206,7 +205,6 @@ public class AutoWorkbenchBlockEntity extends BlockEntity implements MenuProvide
                 nbtTagList.add(itemTag);
             }
         }
-
         return nbtTagList;
     }
 
@@ -223,7 +221,6 @@ public class AutoWorkbenchBlockEntity extends BlockEntity implements MenuProvide
 
             recipeIdForSetRecipe = ResourceLocation.tryParse(stringTag.getAsString());
         }
-
         progress = pTag.getInt("recipe.progress");
     }
 
@@ -514,11 +511,8 @@ public class AutoWorkbenchBlockEntity extends BlockEntity implements MenuProvide
 
         } else {
             this.recipeIdForSetRecipe = null;
-
             this.craftingRecipe = null;
-
             this.patternResultSlots.setItem(0, ItemStack.EMPTY);
-
             this.oldCopyOfRecipe = null;
 
             resetProgress();
@@ -540,7 +534,6 @@ public class AutoWorkbenchBlockEntity extends BlockEntity implements MenuProvide
     private void craftItem(CraftingContainer copyOfPatternSlots) {
         if (this.craftingRecipe == null) {
             resetProgress();
-
             return;
         }
 
@@ -594,7 +587,6 @@ public class AutoWorkbenchBlockEntity extends BlockEntity implements MenuProvide
 
             this.itemHandler.setStackInSlot(emptyIndices.remove(0), itemStack);
         }
-
         resetProgress();
     }
 
