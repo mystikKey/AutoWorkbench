@@ -7,7 +7,8 @@
 
   "creativetab.autoworkbench_tab": "Auto Workbench",
 
-  "block.autoworkbenchmod.auto_workbench" : "Auto Workbench",
+  "block.autoworkbenchmod.auto_workbench": "Auto Workbench",
 
-  "tooltip.autoworkbenchmod.auto_workbench.cycle_through_recipes": "Cycle through recipes"
+  "tooltip.autoworkbenchmod.auto_workbench.cycle_through_recipes": "Cycle through recipes",
+  "tooltip.autoworkbenchmod.auto_workbench.tooltip": "Allows auto crafting without the need for energy.\nInsert items in the input only after selecting recipe."
 }

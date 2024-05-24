@@ -1,7 +1,6 @@
 package net.lockf.autoworkbenchmod.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.lockf.autoworkbenchmod.AutoWorkbenchMod;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -13,10 +12,10 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class AbstractGenericEnergyStorageContainerScreen <T extends AbstractContainerMenu> extends AbstractContainerScreen<T> {
+public class AbstractGenericStorageContainerScreen<T extends AbstractContainerMenu> extends AbstractContainerScreen<T> {
     protected final ResourceLocation TEXTURE;
 
-    public AbstractGenericEnergyStorageContainerScreen(T menu, Inventory inventory, Component titleComponent,ResourceLocation texture) {
+    public AbstractGenericStorageContainerScreen(T menu, Inventory inventory, Component titleComponent, ResourceLocation texture) {
         super(menu, inventory, titleComponent);
         this.TEXTURE = texture;
     }
@@ -33,8 +32,8 @@ public class AbstractGenericEnergyStorageContainerScreen <T extends AbstractCont
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {
+        renderBackground(guiGraphics); // must be in the first line otherwise it will cover the GUI
         super.render(guiGraphics, mouseX, mouseY, delta);
-
         renderTooltip(guiGraphics, mouseX, mouseY);
     }
 }
