@@ -4,8 +4,10 @@ import net.lockf.autoworkbenchmod.AutoWorkbenchMod;
 import net.lockf.autoworkbenchmod.networking.ModMessages;
 import net.lockf.autoworkbenchmod.networking.packet.CycleAutoCrafterRecipeOutputC2SPacket;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -15,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
-public class AutoWorkbenchScreen extends AbstractGenericEnergyStorageContainerScreen<AutoWorkbenchMenu> {
+public class AutoWorkbenchScreen extends AbstractGenericStorageContainerScreen<AutoWorkbenchMenu> {
     public AutoWorkbenchScreen(AutoWorkbenchMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle, new ResourceLocation(AutoWorkbenchMod.MOD_ID, "textures/gui/auto_workbench.png"));
         imageHeight = 206;
@@ -25,13 +27,16 @@ public class AutoWorkbenchScreen extends AbstractGenericEnergyStorageContainerSc
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int mouseButton) {
         if(mouseButton == 0) {
+            boolean clicked = false;
             if(isHovering(126, 16, 12, 12, mouseX, mouseY)) {
                 //Cycle through recipes
-
                 ModMessages.sendToServer(new CycleAutoCrafterRecipeOutputC2SPacket(menu.getBlockEntity().getBlockPos()));
+                clicked = true;
             }
-        }
 
+            if(clicked)
+                minecraft.getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_BUTTON_CLICK, 1.f));
+        }
         return super.mouseClicked(mouseX, mouseY, mouseButton);
     }
 

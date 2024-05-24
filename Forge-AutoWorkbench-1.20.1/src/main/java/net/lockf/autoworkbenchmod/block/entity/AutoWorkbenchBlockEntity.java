@@ -1,6 +1,7 @@
 package net.lockf.autoworkbenchmod.block.entity;
 
 import com.mojang.datafixers.util.Pair;
+import net.lockf.autoworkbenchmod.Config;
 import net.lockf.autoworkbenchmod.block.entity.handler.InputOutputItemHandler;
 import net.lockf.autoworkbenchmod.networking.ModMessages;
 import net.lockf.autoworkbenchmod.networking.packet.ItemStackSyncS2CPacket;
@@ -64,7 +65,7 @@ public class AutoWorkbenchBlockEntity extends BlockEntity implements MenuProvide
     private CraftingRecipe craftingRecipe;
 
     private int progress = 0;
-    private int maxProgress = 5;
+    private int maxProgress = Config.maxProgress /*10 - default*/;
 
     private boolean hasRecipeLoaded = false;
 
